@@ -25,3 +25,4 @@ func century(_ year: Int) -> Int {
     }
 }
 
+century(year: 200)
