@@ -1,2 +1,2 @@
 # Leetcode-CodeWars-solutions
-Answers for the programming challenges
+Answers for the programming challenges from the leetcode.com and codewars.com 
