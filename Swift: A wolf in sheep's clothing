@@ -20,7 +20,7 @@ Output: "Oi! Sheep number 1! You are about to be eaten by a wolf!"
 Input: ["sheep", "sheep", "wolf"]
 Output: "Pls go away and stop eating my sheep"*/
 
-func warnTheSheep(_ queue: [String]) -> String {
+func warnTheSheep(queue: [String]) -> String {
     
     let index = queue.firstIndex(of: "wolf")
     var tabCount = queue.count
@@ -33,9 +33,18 @@ func warnTheSheep(_ queue: [String]) -> String {
             if i == index{
                 var tabIndex = queue.index(after: i)
                 var eatSheep = tabCount - tabIndex
-                return "Oi! Sheep number \(eatSheep)! You are about to be eaten by a wolf!"    
+                return "Oi! Sheep number \(eatSheep)! You are about to be eaten by a wolf!"
+                //            for i in 0..<tabela.count{
+                //                if i == index{
+                //                    var b = tabela[tabela.index(after: i)]
+                //                    print(tabela.index(after: i))
+                //                    print(b)
+                //                    print((tabela.count)-1)
+                
             }
         }
     }
     return ""
 }
+warnTheSheep(queue: ["wolf","sheep","sheep", "sheep","sheep"])
+
