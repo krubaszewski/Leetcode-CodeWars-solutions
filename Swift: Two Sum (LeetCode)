@@ -1,0 +1,33 @@
+/* Two Sum (https://leetcode.com/problems/two-sum/description/):
+Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.
+
+Example 1:
+
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].*/
+
+
+// So we are going to check, if some values in the array sums to the target.
+// In order to do it dictionary must be used. Dictionary is going to contain [value:index]. 
+In each iteration we have to check the difference: target - array[i], if it's in the dictionary then we are going to return indexes of these numbers,
+if not add number and index to the dictionary.
+
+func twoSum(nums:[Int], target: Int) -> [Int]{
+    var dict: [Int:Int] = [:] //or var dict = [Int:Int]()
+
+    for (i, v) in nums.enumerated(){
+        let searchV = target - nums[i] //it can beas well: searchV  = target - v
+        if var searchV = dict[searchV]{
+            return [searchV,i]
+        }
+        dict[v] = i
+        print(dict)
+    }
+    return [0,0]
+}
+twoSum(nums: [1,2,3,5], target: 6)
