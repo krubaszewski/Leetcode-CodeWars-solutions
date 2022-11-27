@@ -1,0 +1,17 @@
+/* Simple multiplication:
+
+This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.*/
+
+func simpleMultiplication(_ num: Int) -> Int {
+    var modulo = num % 2
+    var result:Int
+    
+    if modulo == 0{
+        result = num * 8
+    }else{
+        result = num * 9
+    }
+    return result
+}
+
+simpleMultiplication(8)
