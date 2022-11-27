@@ -1,0 +1,23 @@
+/* Sum Mixed Array (https://www.codewars.com/kata/57eaeb9578748ff92a000009): 
+
+Given an array of integers as strings and numbers, return the sum of the array values as if all were numbers.
+Return your answer as a number.*/
+
+
+func sumMix(_ arr: [Any]) -> Int {
+    var sum = 0
+
+    for obj in arr{
+        if (obj is String) {
+            let test = Int("\(obj)")!
+            sum += test
+        }else{
+            if let intAny = obj as? Int {
+                sum += intAny
+            }
+        }
+    }
+    return sum
+}
+
+sumMix(arr:[1, 2, "3"])
