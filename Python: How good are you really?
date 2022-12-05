@@ -11,5 +11,6 @@ Note:
 Your points are not included in the array of your class's points. 
 For calculating the average point you may add your point to the given array!*/
 
-def getVolumeOfCubiod(length, width, height):
-    return length*width*height
+def better_than_average(class_points, your_points):
+    x = sum(class_points)/len(class_points)
+    return (bool(your_points>x))
