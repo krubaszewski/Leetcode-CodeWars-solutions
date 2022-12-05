@@ -1,4 +1,5 @@
-*/ Find Maximum and Minimum Values of a List:
+"""
+Find Maximum and Minimum Values of a List:
 
 Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language) 
 that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
@@ -10,7 +11,8 @@ Examples (Input -> Output):
 * [5]                             -> min = 5, max = 5
 
 Notes:
-You may consider that there will not be any empty arrays/vectors. /*
+You may consider that there will not be any empty arrays/vectors.
+"""
 
 def minimum(arr):
     return min(arr)
