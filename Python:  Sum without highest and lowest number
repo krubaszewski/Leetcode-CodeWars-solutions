@@ -1,4 +1,5 @@
-/* Sum without highest and lowest number: 
+"""
+Sum without highest and lowest number: 
 Task
 Sum all the numbers of a given array ( cq. list ), except the highest
 and the lowest element (by value, not by index!).
@@ -13,7 +14,8 @@ Example:
 
 Input validation:
 If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the 
-given array is an empty list or a list with only 1 element, return 0.*/
+given array is an empty list or a list with only 1 element, return 0.
+"""
 
 def sum_array(arr):
     if arr is None:
