@@ -1,0 +1,26 @@
+func isValid(_ s: String) -> Bool {
+        var test: [Character] = []
+    
+    if s.isEmpty {
+        return false
+    }
+    
+    var dict: [Character:Character] =
+    [")":"(",
+     "]":"[",
+     "}":"{"]
+    
+    for i in s{
+        if i == "(" || i == "[" || i == "{"{ //dict.keys.contains(i){
+            test.append(i)
+        }else{
+            let last = test.last
+            if last == dict[i] {
+                test.popLast()
+            }else{
+                test.append(i)
+            }
+        }
+    }
+    return test.isEmpty
+    }
