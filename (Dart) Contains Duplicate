@@ -1,0 +1,28 @@
+void main() {
+print(containsDuplicate([1,3,4,2,2]));
+print(containsDuplicateDiffLoop([1,3,4,2,2]));
+}
+
+  bool containsDuplicate(List<int> nums) {
+      var set = <int>{};
+    
+    for(int i = 0; i < nums.length; i++){
+      if(set.contains(nums[i])){
+        return true;
+      }
+      set.add(nums[i]);
+    }
+    return false;
+  }
+
+  bool containsDuplicateDiffLoop(List<int> nums) {
+      var set = <int>{};
+    
+    for (int i in nums){
+      if (set.contains(i)){
+        return true;
+      }
+      set.add(i);
+    }
+    return false;
+  }
